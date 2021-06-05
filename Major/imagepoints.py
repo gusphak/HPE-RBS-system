@@ -1,0 +1,29 @@
+from matplotlib import image
+from matplotlib import pyplot as plt
+  
+# to read the image stored in the working directory
+data = image.imread('/content/gdrive/MyDrive/Alphapose/AlphaPose/examples/demo/WIN_20210413_13_05_29_Pro.jpg')
+  
+
+Nose = [719.9834594726562, 373.5616455078125]
+LEye = [766.7461547851562, 319.005126953125]
+REye = [657.6331176757812, 326.7989501953125]
+LEar = [844.6840209960938, 365.767822265625]
+REar = [587.4890747070312, 357.97406005859375]
+LShoulder = [1000.5596313476562, 638.55029296875]
+RShoulder = [439.40716552734375, 677.5192260742188]
+LElbow = [673.2206420898438, 350.1802978515625]
+RElbow = [681.0144653320312, 350.1802978515625]
+LWrist = [829.0963745117188, 357.97406005859375]
+RWrist = [852.4778442382812, 342.386474609375]
+LHip = [1000.5596313476562, 646.3441162109375]
+RHip = [595.2828979492188, 365.767822265625]
+LKnee = [587.4890747070312, 389.149169921875]
+RKnee = [392.6444396972656, 724.2819213867188]
+LAnkle = [626.4579467773438, 303.41754150390625]
+RAnkle = [844.6840209960938, 365.767822265625]
+
+plt.plot(Nose, LEye, REye, LEar, REar, LShoulder, RShoulder, LElbow, RElbow, LWrist, RWrist, LHip, RHip, LKnee, RKnee, LAnkle, RAnkle, marker = 'v', color ="white")
+plt.axis('off')
+plt.imshow(data)
+plt.show()
